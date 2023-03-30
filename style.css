@@ -1,0 +1,124 @@
+/* Variables */
+:root {
+    --fuente: "Open Sans", sans-serif;
+
+    --primario: #76b7d4;
+    --secundario: #ffe100;
+    --blanco: #ffffff;
+    --negro: #000000;
+}
+
+/* Utilidades */
+html {
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: var(--fuente);
+    font-size: 1.6rem;
+    line-height: 2;
+}
+
+/* Globales */
+a {
+    text-decoration: none;
+}
+
+/* Fuente responsiva */
+
+@media screen and (max-width: 510px)  {
+    html{
+        font-size: 12px;
+    }
+}
+
+/* --- Diseño --- */
+
+.main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(to top, #040404c1 0%, #040404c1 100%),
+    url('./background.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.encabezado{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.encabezado__img{
+    max-width: 10rem;
+    border-radius: 50%;
+}
+
+.encabezado__img::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to top, #dc0d0dc1 0%, #ff0000f1 100%);
+}
+
+.encabezado__nombre{
+    color: var(--blanco);
+    font-weight: 200;
+    font-size: 2.1rem;
+    margin: .8rem 0;
+}
+
+.main__links{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.lista{
+    list-style: none;
+}
+
+.lista__link{
+    color: var(--blanco);
+    background-color: var(--primario);
+    border-radius: 2rem;
+    display: flex;
+    justify-content: center;
+    width: 30rem;
+    margin: 1rem;
+    text-transform: uppercase;
+}
+
+.lista__link:hover{
+    background-color: var(--blanco);
+    color: var(--primario);
+}
+
+.redes__link{
+    padding: 0 2rem;
+    color: var(--secundario);
+    opacity: .6;
+}
+
+.redes__link:hover{
+    opacity: 1;
+}
